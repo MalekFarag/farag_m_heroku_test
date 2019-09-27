@@ -1,0 +1,601 @@
+/* CSS Document */
+/*Linking Othe .scss files*/
+/* CSS Document */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Lato', sans-serif;
+  color: whitesmoke;
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+video {
+  position: fixed;
+  z-index: -3;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+}
+
+.mainHeader {
+  position: fixed;
+  z-index: 2;
+  margin-top: 25px;
+  margin-right: 5px;
+  margin-left: 5px;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainHeader .headBut {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.mainHeader .headBut:hover {
+  color: #1ED760;
+}
+
+.mainHeader .headLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80px;
+  position: relative;
+  top: 5px;
+  cursor: pointer;
+}
+
+.mainHeader .headLink img {
+  height: 40px;
+  width: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainHeader .headLink p {
+  position: relative;
+  bottom: 10px;
+  font-size: 14px;
+}
+
+.mainHeader .burger {
+  margin-right: 30px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  cursor: pointer;
+}
+
+.mainHeader .burger .line {
+  height: 4px;
+  margin: 5px;
+  width: 32px;
+  background-color: white;
+}
+
+.mainHeader .rotate {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.mainNav {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-clip-path: circle(0px at 50% -10%);
+          clip-path: circle(0px at 50% -10%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.mainNav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+}
+
+.mainNav ul li {
+  cursor: pointer;
+  font-size: 60px;
+  margin-top: 130px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.mainNav ul li:hover {
+  color: #1ED760;
+}
+
+.open {
+  -webkit-clip-path: circle(2000px at 50% -10%);
+          clip-path: circle(2000px at 50% -10%);
+}
+
+.mainBody {
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+.mainBody .albumArea img {
+  width: 90%;
+  margin-top: 95px;
+  opacity: .8;
+  -webkit-box-shadow: 0px 0px 45px -16px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 45px -16px rgba(0, 0, 0, 0.75);
+}
+
+.mainBody .albumArea .spotifyLink {
+  background-color: #1ED760;
+  height: 40px;
+  border-radius: 20px;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  bottom: 20px;
+  cursor: pointer;
+}
+
+.mainBody .albumArea .spotifyLink p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  width: 100%;
+}
+
+.mainBody .artist {
+  border-bottom: solid 1px #4D3822;
+  margin-top: 40px;
+  opacity: .85;
+}
+
+.mainBody .artist .bio {
+  width: 100%;
+  background: url("../images/cordae.png") no-repeat;
+  background-position: 130% 100%;
+  background-size: 55%;
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainBody .artist .bio h2 {
+  font-size: 36px;
+  line-height: 70px;
+  margin-top: 30px;
+  position: relative;
+  bottom: 25px;
+  z-index: -1;
+  background: url("../images/sign1.svg") center no-repeat;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.mainBody .artist .bio P {
+  text-align: left;
+  width: 65%;
+  margin-left: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  position: relative;
+  bottom: 10px;
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.mainBody .trackList {
+  margin-top: 50px;
+  opacity: .8;
+}
+
+.mainBody .trackList h2 {
+  font-size: 22px;
+}
+
+.mainBody .trackList ul li {
+  margin-top: 70px;
+  font-size: 16px;
+  font-family: 'Mansalva', cursive;
+}
+
+.mainBody .reviewArea {
+  margin-top: 30px;
+  opacity: .85;
+}
+
+.mainBody .reviewArea h2 {
+  font-size: 36px;
+  line-height: 70px;
+  background: url("../images/sign2.svg") center no-repeat;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.mainBody .reviewArea p {
+  margin-right: auto;
+  margin-left: auto;
+  width: 95%;
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.mainBody .reviewArea .points li {
+  font-size: 16px;
+  margin: 10px;
+  margin-top: 30px;
+  line-height: 22px;
+}
+
+.mainBody .reviewArea .points li span {
+  font-style: italic;
+}
+
+.mainBody .merch {
+  margin-top: 30px;
+}
+
+.mainBody .merch h2 {
+  font-size: 36px;
+  line-height: 70px;
+  background: url("../images/sign1.svg") center no-repeat;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.mainBody .merch a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.mainBody .merch p {
+  width: 100%;
+  font-size: 26px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.mainBody .merch p:hover {
+  color: #1ED760;
+}
+
+.mainBody .merch img {
+  width: 100%;
+}
+
+.mainFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: solid 1px #4D3822;
+  opacity: .9;
+}
+
+.mainFooter .social {
+  margin-top: 20px;
+  width: 50%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 10px;
+  text-align: center;
+}
+
+.mainFooter .social .socialImg .fab {
+  font-size: 24px;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.mainFooter .social .socialImg .fab:hover {
+  color: #1ED760;
+}
+
+.mainFooter .footerNav {
+  max-width: 1500px;
+  width: 50%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.mainFooter .footerNav li {
+  margin-top: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.mainFooter .footerNav li:hover {
+  color: #1ED760;
+}
+
+.mainFooter p {
+  font-size: 10px;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+.merchBody {
+  padding-top: 100px;
+  max-width: 1500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.merchBody h2 {
+  width: 100%;
+  font-size: 36px;
+  line-height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  background: url("../images/sign1.svg") center no-repeat;
+}
+
+.merchBody h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.merchBody .catologue {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.merchBody .catologue .item {
+  width: 100%;
+  max-width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.merchBody .catologue .item img {
+  width: 100%;
+}
+
+.merchBody .catologue p {
+  position: relative;
+  bottom: 40px;
+}
+
+@media screen and (min-width: 435px) {
+  .artist .bio h2 {
+    font-size: 40px !important;
+    line-height: 90px !important;
+  }
+  .artist .bio p {
+    margin-top: 10px;
+    font-size: 22px !important;
+    line-height: 26px !important;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .artist .bio p {
+    margin-top: 30px;
+    padding-bottom: 30px;
+    font-size: 26px !important;
+    line-height: 30px !important;
+  }
+  .merch img {
+    max-width: 500px;
+  }
+  .mainBody .trackList h2 {
+    font-size: 30px;
+  }
+  .mainBody .trackList li {
+    font-size: 28px !important;
+  }
+  .mainBody .reviewArea p {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .mainBody .reviewArea .points li {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  .mainFooter {
+    max-width: 1500px;
+  }
+  .mainFooter .social {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .mainFooter .footerNav {
+    position: relative;
+    top: 6px;
+    height: 110px;
+  }
+  .mainFooter .footerNav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 740px) {
+  .albumArea img {
+    max-width: 740px;
+  }
+  .artist .bio h2 {
+    font-size: 60px !important;
+    line-height: 110px !important;
+  }
+  .artist .bio p {
+    padding-bottom: 50px;
+    font-size: 30px !important;
+    line-height: 40px !important;
+  }
+  .merchBody .catologue {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .merchBody .catologue .item {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .artist .bio {
+    background-position: 100% 100% !important;
+    background-size: contain  !important;
+  }
+  .mainBody .reviewArea h2 {
+    line-height: 100px;
+    font-size: 50px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+  }
+  .mainBody .merch h2 {
+    line-height: 100px;
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  video {
+    width: 100% !important;
+  }
+}
+/*# sourceMappingURL=main.css.map */

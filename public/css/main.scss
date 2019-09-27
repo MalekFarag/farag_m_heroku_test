@@ -5,3 +5,556 @@
 /*Linking Othe .scss files*/
 @import './modules/reset';
 @import './modules/vars';
+
+.hidden{
+    display: none;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    margin: 0 auto; 
+
+    font-family: 'Lato', sans-serif;
+    color: whitesmoke;
+    background-color: black;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+video{
+    position: fixed;
+    z-index: -3;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+}
+
+.mainHeader{
+    position: fixed;
+    z-index: 2;
+    margin-top: 25px;
+    margin-right: 5px;
+    margin-left: 5px;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+    
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .headBut{
+        transition: all .3s ease;
+
+        &:hover{
+            color: #1ED760;
+        }
+    }
+
+    .headLink{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        width: 80px;
+
+        position: relative;
+        top: 5px;
+
+        cursor: pointer;
+        img{
+            height: 40px;
+            width: 40px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        p{
+            position: relative;
+            bottom: 10px;
+            font-size: 14px;
+        }
+    }
+
+    
+    .burger{
+        margin-right: 30px;
+        transform: rotate(0deg);
+        transition: all .3s ease-out;
+        cursor: pointer;
+        .line{
+        height: 4px;
+        margin: 5px;
+        width: 32px;
+        background-color: white;
+
+    }
+    
+    }
+    .rotate{
+        transform: rotate(90deg);
+    }
+    
+    
+}
+
+.mainNav{
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+        clip-path: circle(0px at 50% -10%);
+
+        transition: all 1s ease;
+        
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 30px;
+
+            li{
+                cursor: pointer;
+                font-size: 60px;
+                margin-top: 130px;
+                transition: all .3s ease;
+                &:hover{
+                    color: #1ED760;
+                }
+            }
+        }
+    }
+
+    .open{
+        clip-path: circle(2000px at 50% -10%);
+    }
+
+.mainBody{
+    margin: 0 auto;
+    max-width: 1500px;
+
+    .albumArea{
+        img{
+            width: 90%;
+            margin-top: 95px;
+            opacity: .8;
+            box-shadow: 0px 0px 45px -16px rgba(0,0,0,0.75);
+            
+        }
+        .spotifyLink{
+            background-color: #1ED760;
+            height: 40px;
+            border-radius: 20px;
+            width: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+
+            position: relative;
+            bottom: 20px;
+
+            cursor: pointer;
+            p{
+                align-self: center;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+
+    .artist{
+        border-bottom: solid 1px #4D3822; 
+        margin-top: 40px;
+        opacity: .85;
+        
+        .bio{
+            width: 100%;
+            background: url("../images/cordae.png") no-repeat;
+            background-position: 130% 100%;
+            background-size: 55%;
+            max-width: 1350px;
+
+            margin-left: auto;
+            margin-right: auto;
+            
+        h2{
+            font-size: 36px;
+            line-height: 70px;
+
+            margin-top: 30px;
+
+            position: relative;
+            bottom: 25px;
+            z-index: -1;
+
+            background: url("../images/sign1.svg") center no-repeat;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        P{
+            text-align: left;
+            width: 65%;
+            margin-left: 20px;
+            font-size: 14px;
+            line-height: 20px;
+
+            position: relative;
+            bottom: 10px;
+            text-shadow: 1px 1px 1px #000, 3px 3px 5px rgba(0,0,0,0.2);
+        }
+        }
+
+    }
+
+    .trackList{
+        margin-top: 50px;
+        opacity: .8;
+
+        h2{
+            font-size: 22px;
+        }
+
+        ul{
+
+            li{
+                margin-top: 70px;
+                font-size: 16px;
+                font-family: 'Mansalva', cursive;
+            }
+        }
+
+    }
+
+    .reviewArea{
+        margin-top: 30px;
+        opacity: .85;
+
+        h2{
+            font-size: 36px;
+            line-height: 70px;
+            
+
+            background: url("../images/sign2.svg") center no-repeat;
+            color: rgba(255, 255, 255, 0.85);
+        }
+        p{
+            margin-right: auto;
+            margin-left: auto;
+            width: 95%;
+            text-shadow: 1px 1px 1px #000, 3px 3px 5px rgba(0,0,0,0.2);
+            margin-top: 20px;
+
+            font-size: 20px;
+            line-height: 25px;
+        }
+
+        .points{
+            li{
+                font-size: 16px;
+                margin: 10px;
+                margin-top: 30px;
+                line-height: 22px;
+                span{
+                    font-style: italic;
+                }
+            }
+        }
+    }
+
+    .merch{
+        margin-top: 30px;
+        h2{
+                font-size: 36px;
+                line-height: 70px;
+                
+    
+                background: url("../images/sign1.svg") center no-repeat;
+                color: rgba(255, 255, 255, 0.85);
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+        }
+        p{
+            width: 100%;
+            font-size: 26px;
+            transition: all .3s ease;
+            &:hover{
+                color: #1ED760;
+            }
+        }
+
+        img{
+            width: 100%;
+        }
+
+    }
+
+}
+
+.mainFooter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: solid 1px #4D3822;
+    opacity: .9;
+
+    .social{
+        margin-top: 20px;
+        width: 50%;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 10px;
+        text-align: center;
+
+        .socialImg{
+            .fab{
+                font-size: 24px;
+                cursor: pointer;
+                transition: all .3s ease;
+
+        &:hover{
+            color: #1ED760;
+        }
+            }
+        }
+
+    }
+
+    .footerNav{
+        max-width: 1500px;
+        width: 50%;
+        margin-bottom: 20px;
+        text-align: center;
+          li{
+        margin-top: 20px;
+        font-size: 14px;
+        cursor: pointer;
+
+        transition: all .3s ease;
+
+        &:hover{
+            color: #1ED760;
+        }
+        }  
+    }
+    
+        p{
+            font-size: 10px;
+            margin-left: auto;
+            margin-bottom: 10px;
+        }
+}
+
+// Merch page
+
+.merchBody{
+    padding-top: 100px;
+    max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto; 
+    width: 100%;
+    h2{
+        width: 100%;
+        font-size: 36px;
+        line-height: 70px;
+        margin-left: auto;
+        margin-right: auto; 
+
+        background: url("../images/sign1.svg") center no-repeat;
+    }
+    h3{
+        font-size: 30px;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto; 
+    }
+
+    .catologue{
+        margin-left: auto;
+        margin-right: auto; 
+        .item{
+            width: 100%;
+            max-width: 600px;
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            img{
+                width: 100%;
+            }
+        }
+
+        p{
+            position: relative;
+            bottom: 40px;
+        }
+    }
+    
+}
+
+
+//media queries
+
+@media screen and (min-width: 435px){
+    .artist{
+        .bio{
+            h2{
+                font-size: 40px !important;
+                line-height: 90px !important;
+            }
+        p{
+            margin-top: 10px;
+            font-size: 22px !important;
+            line-height: 26px !important;
+        }
+    }
+}
+}
+
+@media screen and (min-width: 600px){
+    .artist{
+        .bio{
+        p{
+            margin-top: 30px;
+            padding-bottom: 30px;
+            font-size: 26px !important;
+            line-height: 30px !important;
+        }
+    }
+
+    
+}
+.merch{
+        img{
+            max-width: 500px;
+        }
+    }
+.mainBody{
+    .trackList{
+        h2{
+            font-size: 30px; 
+        }
+
+        li{
+            font-size: 28px !important;
+        }
+    }
+
+    .reviewArea{
+        p{
+            font-size: 28px;
+            line-height: 38px;
+        }
+        .points{
+            li{
+                font-size: 20px;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
+
+.mainFooter{
+    max-width: 1500px;
+    .social{
+        display: flex !important;
+        justify-content: space-around;
+    }
+    .footerNav{
+        position: relative;
+        top: 6px;
+        height: 110px;
+        ul{
+            display: flex;
+            flex-direction: row !important;
+            justify-content: space-around;
+        }
+        
+    }
+}
+}
+
+@media screen and (min-width: 740px){
+    .albumArea{
+        img{
+            max-width: 740px;
+        }
+    }
+    .artist{
+        .bio{
+            h2{
+                font-size: 60px !important;
+                line-height: 110px !important;
+            }
+        p{
+            padding-bottom: 50px;
+            font-size: 30px !important;
+            line-height: 40px !important;
+        }
+    }
+}
+
+.merchBody{
+    .catologue{
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-around;
+        .item{
+            width: 45%;
+        }
+    }
+}
+
+}
+
+
+
+@media screen and (min-width: 940px){
+    .artist{
+        .bio{
+            background-position: 100% 100% !important;
+            background-size: contain  !important;
+        }
+    }
+
+    .mainBody{
+        .reviewArea{
+            h2{
+                line-height: 100px;
+                font-size: 50px;
+                margin-top: 60px;
+                margin-bottom: 50px;
+            }
+        }
+
+        .merch{
+            h2{
+                line-height: 100px;
+                font-size: 50px;
+            }
+        }
+    }
+    
+}
+
+
+@media screen and (min-width: 1500px){
+    video{
+        width: 100% !important;
+    }
+}
