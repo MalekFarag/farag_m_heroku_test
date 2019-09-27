@@ -15,17 +15,6 @@ app.get('/', (req, res) => {
   // this builds localhost:3000/views/index.html
 })
 
-app.get('/contact', (req, res) => {
-  console.log('at the contact route');
-  res.sendFile(path.join(__dirname + '/views/contact.html'));
-  // this builds localhost:3000/views/contact.html
-})
-
-app.get('/portfolio', (req, res) => {
-  console.log('at the portfolio route');
-  res.sendFile(path.join(__dirname + '/views/portfolio.html'));
-  // this builds localhost:3000/views/portfolio.html
-})
 
 app.listen(port,  () => {
   console.log(`Server running at ${port}/`);

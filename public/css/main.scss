@@ -30,7 +30,7 @@ video{
 
 .mainHeader{
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     margin-top: 25px;
     margin-right: 5px;
     margin-left: 5px;
@@ -78,8 +78,42 @@ video{
         background-color: white;
     }
     }
+
+    
     
 }
+
+.mainNav{
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+        clip-path: circle(0px at 50% -10%);
+
+        transition: all 1s ease;
+        
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 30px;
+
+            li{
+                cursor: pointer;
+                font-size: 60px;
+                margin-top: 130px;
+                transition: all .3s ease;
+                &:hover{
+                    color: #1ED760;
+                }
+            }
+        }
+    }
+
+    .open{
+        clip-path: circle(2000px at 50% -10%);
+    }
 
 .mainBody{
     margin: 0 auto;
@@ -120,8 +154,9 @@ video{
         
         .bio{
             width: 100%;
-            background: url("../images/cordae.png") right no-repeat;
-            background-size: contain;
+            background: url("../images/cordae.png") no-repeat;
+            background-position: 130% 100%;
+            background-size: 55%;
             
         h2{
             font-size: 36px;
@@ -146,16 +181,8 @@ video{
 
             position: relative;
             bottom: 10px;
-            color: white;
             text-shadow: 1px 1px 1px #000, 3px 3px 5px rgba(0,0,0,0.2);
         }
-        }
-
-
-        .bioImg{
-            width: 45%;
-            background: url("../images/cordae.png") center no-repeat;
-            background-size: contain;
         }
 
     }
@@ -172,7 +199,7 @@ video{
 
             li{
                 margin-top: 70px;
-                font-size: 18px;
+                font-size: 16px;
                 font-family: 'Mansalva', cursive;
             }
         }
@@ -181,15 +208,95 @@ video{
 
     .reviewArea{
         margin-top: 30px;
-        opacity: .9;
+        opacity: .85;
 
         h2{
             font-size: 36px;
             line-height: 70px;
+            
 
             background: url("../images/sign2.svg") center no-repeat;
             color: rgba(255, 255, 255, 0.85);
         }
+        p{
+            margin-right: auto;
+            margin-left: auto;
+            width: 95%;
+            text-shadow: 1px 1px 1px #000, 3px 3px 5px rgba(0,0,0,0.2);
+            margin-top: 20px;
+
+            font-size: 20px;
+            line-height: 25px;
+        }
+
+        .points{
+            li{
+                font-size: 16px;
+                margin: 10px;
+                margin-top: 30px;
+                line-height: 22px;
+                span{
+                    font-style: italic;
+                }
+            }
+        }
     }
 
+    .merch{
+        margin-top: 30px;
+        h2{
+                font-size: 36px;
+                line-height: 70px;
+                
+    
+                background: url("../images/sign1.svg") center no-repeat;
+                color: rgba(255, 255, 255, 0.85);
+        }
+    }
+
+}
+
+.mainFooter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: solid 1px #4D3822;
+    opacity: .9;
+
+    .social{
+        margin-top: 20px;
+        width: 30%;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 10px;
+
+        .socialImg{
+            .fab{
+                font-size: 24px;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .footerNav{
+        width: 30%;
+        margin-bottom: 20px;
+          li{
+        margin-top: 20px;
+        font-size: 14px;
+        cursor: pointer;
+        }  
+    }
+    
+        p{
+            font-size: 10px;
+            margin-left: auto;
+            margin-bottom: 10px;
+        }
 }
