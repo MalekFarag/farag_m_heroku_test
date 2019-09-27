@@ -1,0 +1,215 @@
+/* CSS Document */
+/*Linking Othe .scss files*/
+/* CSS Document */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Lato', sans-serif;
+  color: whitesmoke;
+}
+
+video {
+  position: fixed;
+  z-index: -3;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+}
+
+.mainHeader {
+  position: fixed;
+  z-index: 1;
+  margin-top: 25px;
+  margin-right: 5px;
+  margin-left: 5px;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainHeader .headLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80px;
+  position: relative;
+  top: 5px;
+  cursor: pointer;
+}
+
+.mainHeader .headLink img {
+  height: 40px;
+  width: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainHeader .headLink p {
+  position: relative;
+  bottom: 10px;
+  font-size: 14px;
+}
+
+.mainHeader .burger {
+  width: 80px;
+  cursor: pointer;
+}
+
+.mainHeader .burger .line {
+  height: 4px;
+  margin: 5px;
+  width: 32px;
+  background-color: white;
+}
+
+.mainBody {
+  margin: 0 auto;
+}
+
+.mainBody .albumArea img {
+  width: 90%;
+  margin-top: 95px;
+  opacity: .8;
+  -webkit-box-shadow: 0px 0px 45px -16px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 45px -16px rgba(0, 0, 0, 0.75);
+}
+
+.mainBody .artist {
+  border-bottom: solid 1px #4D3822;
+  margin-top: 50px;
+  opacity: .85;
+}
+
+.mainBody .artist .bio {
+  width: 100%;
+  background: url("../images/cordae.png") right no-repeat;
+  background-size: contain;
+}
+
+.mainBody .artist .bio h2 {
+  font-size: 36px;
+  line-height: 70px;
+  margin-top: 30px;
+  position: relative;
+  bottom: 40px;
+  z-index: -1;
+  background: url("../images/sign1.svg") center no-repeat;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.mainBody .artist .bio P {
+  text-align: left;
+  width: 65%;
+  margin-left: 10px;
+  font-size: 14px;
+  line-height: 16px;
+  position: relative;
+  bottom: 30px;
+}
+
+.mainBody .artist .bioImg {
+  width: 45%;
+  background: url("../images/cordae.png") center no-repeat;
+  background-size: contain;
+}
+
+.mainBody .trackList {
+  margin-top: 50px;
+  opacity: .7;
+}
+
+.mainBody .trackList h2 {
+  font-size: 22px;
+}
+
+.mainBody .trackList ul li {
+  margin-top: 70px;
+}
+
+.mainBody .reviewArea {
+  margin-top: 30px;
+  opacity: .9;
+}
+
+.mainBody .reviewArea h2 {
+  font-size: 36px;
+  line-height: 70px;
+  background: url("../images/sign2.svg") center no-repeat;
+  color: rgba(255, 255, 255, 0.85);
+}
+/*# sourceMappingURL=main.css.map */

@@ -5,3 +5,168 @@
 /*Linking Othe .scss files*/
 @import './modules/reset';
 @import './modules/vars';
+
+.hidden{
+    display: none;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    margin: 0 auto; 
+
+    font-family: 'Lato', sans-serif;
+    color: whitesmoke;
+}
+
+video{
+    position: fixed;
+    z-index: -3;
+    bottom: 0;
+    right: 0;
+    // width: 100%;
+    height: 100%;
+}
+
+.mainHeader{
+    position: fixed;
+    z-index: 1;
+    margin-top: 25px;
+    margin-right: 5px;
+    margin-left: 5px;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+    
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .headLink{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        width: 80px;
+
+        position: relative;
+        top: 5px;
+
+        cursor: pointer;
+        img{
+            height: 40px;
+            width: 40px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        p{
+            position: relative;
+            bottom: 10px;
+            font-size: 14px;
+        }
+    }
+
+    .burger{
+        width: 80px;
+
+        cursor: pointer;
+        .line{
+        height: 4px;
+        margin: 5px;
+        width: 32px;
+        background-color: white;
+    }
+    }
+    
+}
+
+.mainBody{
+    margin: 0 auto;
+
+    .albumArea{
+        img{
+            width: 90%;
+            margin-top: 95px;
+            opacity: .8;
+            box-shadow: 0px 0px 45px -16px rgba(0,0,0,0.75);
+            
+        }
+    }
+
+    .artist{
+        border-bottom: solid 1px #4D3822; 
+        margin-top: 50px;
+        opacity: .85;
+        
+        .bio{
+            width: 100%;
+            background: url("../images/cordae.png") right no-repeat;
+            background-size: contain;
+            
+        h2{
+            font-size: 36px;
+            line-height: 70px;
+
+            margin-top: 30px;
+
+            position: relative;
+            bottom: 40px;
+            z-index: -1;
+
+            background: url("../images/sign1.svg") center no-repeat;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        P{
+            text-align: left;
+            width: 65%;
+            margin-left: 10px;
+            font-size: 14px;
+            line-height: 16px;
+
+            position: relative;
+            bottom: 30px;
+        }
+        }
+
+
+        .bioImg{
+            width: 45%;
+            background: url("../images/cordae.png") center no-repeat;
+            background-size: contain;
+        }
+
+    }
+
+    .trackList{
+        margin-top: 50px;
+        opacity: .7;
+
+        h2{
+            font-size: 22px;
+        }
+
+        ul{
+
+            li{
+                margin-top: 70px;
+            }
+        }
+
+    }
+
+    .reviewArea{
+        margin-top: 30px;
+        opacity: .9;
+
+        h2{
+            font-size: 36px;
+            line-height: 70px;
+
+            background: url("../images/sign2.svg") center no-repeat;
+            color: rgba(255, 255, 255, 0.85);
+        }
+    }
+
+}
