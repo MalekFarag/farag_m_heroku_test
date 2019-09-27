@@ -10,15 +10,15 @@ const app = express();
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  console.log('at the home route');
+  console.log('Home page');
   res.sendFile(path.join(__dirname + '/views/index.html'));
   // this builds localhost:3000/views/index.html
 })
 
 app.get('/merch', (req, res) => {
-  console.log('at the contact route');
+  console.log('Merch Page');
   res.sendFile(path.join(__dirname + '/views/merch.html'));
-  // this builds localhost:3000/views/contact.html
+  // this builds localhost:3000/views/merch.html
 })
 
 
